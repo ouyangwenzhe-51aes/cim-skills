@@ -1,10 +1,10 @@
 ---
 name: search-path
 description: >
- 导航路径工具（App.InternetMapPath）。提供两点间导航路线创建、场景挂载、路径删除与自定义路径样式能力。当需要基于高德地图在两点之间创建导航路径、自定义路径样式或删除已有导航路径时，使用该工具。
-metadata: 
- version: 1.0.0
- tags: [cimapi, internet-map, navigation, path, scene]
+  导航路径工具（App.InternetMapPath）。提供两点间导航路线创建、场景挂载、路径删除与自定义路径样式能力。当需要基于高德地图在两点之间创建导航路径、自定义路径样式或删除已有导航路径时，使用该工具。
+metadata:
+  version: 1.0.0
+  tags: [cimapi, internet-map, navigation, path, scene]
 ---
 
 # App.InternetMapPath - 搜索导航路径

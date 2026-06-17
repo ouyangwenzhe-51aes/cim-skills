@@ -1,10 +1,10 @@
 ---
 name: lifecircle
 description: >
- N分钟生活圈能力（App.cim.InternetMapLifeCircle）。用于按时间与出行方式计算生活圈范围。在需要基于中心点坐标和出行条件（时间、方式）计算可达范围并可视化展示时，使用该工具。
-metadata: 
-	version: 1.0.0
- tags: [cimapi, internet-map, life-circle, range]
+  N分钟生活圈能力（App.cim.InternetMapLifeCircle）。用于按时间与出行方式计算生活圈范围。在需要基于中心点坐标和出行条件（时间、方式）计算可达范围并可视化展示时，使用该工具。
+metadata:
+  version: 1.0.0
+  tags: [cimapi, internet-map, life-circle, range]
 ---
 
 # N分钟生活圈
