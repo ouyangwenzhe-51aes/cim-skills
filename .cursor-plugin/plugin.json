@@ -1,6 +1,6 @@
 {
   "name": "cimapi-skills",
-  "description": "51WORLD CIM API (@wdp-api/cim-api) skills — SDK initialization, internet map (key config, POI search/get/reset, navigation paths), spatial analysis (openness, contour, sunlight, skyline, dig-terrain, intervisible, height-limit), and hospital scene capabilities (elevator, room box, attached device).",
+  "description": "51WORLD CIM API (@wdp-api/cim-api) skills — SDK initialization, internet map (key config, POI search/get/reset, navigation paths), spatial analysis (openness, contour, sunlight, skyline, dig-terrain, intervisible, height-limit), and hospital scene capabilities (elevator, room box, attached device). Install once, use from Cursor and every other compatible agent harness.",
   "version": "1.1.0",
   "author": {
     "name": "ouyangwenzhe-51aes",

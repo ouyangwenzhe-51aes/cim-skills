@@ -2,13 +2,30 @@
 
 本仓库是 51WORLD 的 CIM API（@wdp-api/cim-api）技能文档集合，面向 Agent 路由和能力编排使用。
 
-当前版本通过 `manifest.json` 维护技能索引，技能正文集中在 `SKILL/` 目录。
+本插件遵循 APM 插件规范，技能正文按「每个技能一个目录 + `SKILL.md`」组织在 `skills/` 目录下，可在 Copilot / Claude / Cursor 等兼容的 Agent 环境中安装使用。
 
 ## 项目概览
 
 - 技能总数：22
 - 一级分类：4（Initialization / InternetMap / Spatial / Hospital）
-- 入口技能：`SKILL/initialization-skill.md`
+- 入口技能：`skills/initialization/SKILL.md`
+
+## 目录结构
+
+```
+cim-skills/
+├── plugin.json              # 插件描述符，声明 "skills": "./skills/"
+├── .claude-plugin/          # Claude / Copilot 插件配置
+│   ├── plugin.json
+│   └── marketplace.json
+├── .cursor-plugin/          # Cursor 插件配置
+│   ├── plugin.json
+│   └── marketplace.json
+└── skills/                  # 每个技能一个目录，正文为 SKILL.md
+    ├── initialization/SKILL.md
+    ├── keycommon/SKILL.md
+    └── ...
+```
 
 ## 能力覆盖
 
@@ -20,7 +37,7 @@
 
 对应文档：
 
-- `SKILL/initialization-skill.md`
+- `skills/initialization/SKILL.md`
 
 ### 2) InternetMap
 
@@ -31,17 +48,17 @@
 
 对应文档：
 
-- `SKILL/keycommon-skill.md`
-- `SKILL/lifecircle-skill.md`
-- `SKILL/searchbytext-skill.md`
-- `SKILL/searchbypolygon-skill.md`
-- `SKILL/searchbycircle-skill.md`
-- `SKILL/searchbyscreen-skill.md`
-- `SKILL/poiget-skill.md`
-- `SKILL/poireset-skill.md`
-- `SKILL/searchpath-skill.md`
-- `SKILL/getpath-skill.md`
-- `SKILL/selectpath-skill.md`
+- `skills/keycommon/SKILL.md`
+- `skills/lifecircle/SKILL.md`
+- `skills/bytext/SKILL.md`
+- `skills/bypolygon/SKILL.md`
+- `skills/bycircle/SKILL.md`
+- `skills/byscreen/SKILL.md`
+- `skills/poi-get/SKILL.md`
+- `skills/poi-reset/SKILL.md`
+- `skills/search-path/SKILL.md`
+- `skills/get-path/SKILL.md`
+- `skills/select-path/SKILL.md`
 
 ### 3) Spatial
 
@@ -55,13 +72,13 @@
 
 对应文档：
 
-- `SKILL/openness-skill.md`
-- `SKILL/contour-skill.md`
-- `SKILL/sunlight-skill.md`
-- `SKILL/skyline-skill.md`
-- `SKILL/digterrain-skill.md`
-- `SKILL/intervisible-skill.md`
-- `SKILL/heightlimit-skill.md`
+- `skills/openness/SKILL.md`
+- `skills/contour/SKILL.md`
+- `skills/sunlight/SKILL.md`
+- `skills/skyline/SKILL.md`
+- `skills/dig-terrain/SKILL.md`
+- `skills/intervisible/SKILL.md`
+- `skills/height-limit/SKILL.md`
 
 ### 4) Hospital
 
@@ -71,26 +88,35 @@
 
 对应文档：
 
-- `SKILL/elevator-skill.md`
-- `SKILL/box-skill.md`
-- `SKILL/device-skill.md`
+- `skills/elevator/SKILL.md`
+- `skills/box/SKILL.md`
+- `skills/device/SKILL.md`
 
-## 与 manifest 的关系
+## 插件加载机制
 
-`manifest.json` 是运行时索引，维护以下信息：
+加载器从 `plugin.json` 的 `"skills": "./skills/"` 入口，扫描 `skills/` 下的**子目录**，读取每个子目录中的 `SKILL.md` 作为一个技能。
 
-- 分类与技能分组（`categories`）
-- 技能文件路径（`path`）
-- API 关键标识（`api`）
-- 全量技能索引（`skillIndex`）
-- 统计信息（`stats`）
+- 子目录名 = `SKILL.md` frontmatter 中的 `name` 字段
+- 技能正文文件名必须为 `SKILL.md`
+- 扁平的 `*.md` 文件不会被识别为技能
 
-当 `SKILL/` 目录新增、删除或重命名文件时，需同步更新 `manifest.json`。
+`SKILL.md` 的 frontmatter 标准格式：
+
+```yaml
+---
+name: <skill-name>
+description: >
+  能力说明与触发场景。
+metadata:
+  version: 1.0.0
+  tags: [cimapi, ...]
+---
+```
 
 ## 维护建议
 
-1. 新增技能时，优先复用现有命名风格：`<feature>-skill.md`
-2. `manifest.json` 的 `skillIndex` 应与实际文件保持一一对应
+1. 新增技能时，在 `skills/` 下新建目录，目录名与 frontmatter 的 `name` 一致，正文写入 `SKILL.md`
+2. frontmatter 缩进统一使用 2 个空格，避免 TAB 与空格混用
 3. 修改 API 标识时，以技能文档中的示例调用为准
-4. 修改后建议做一次 JSON 解析校验，确保 manifest 可被正常读取
+4. 修改后建议对 `plugin.json`、`.claude-plugin/`、`.cursor-plugin/` 下的 JSON 做一次解析校验
 
