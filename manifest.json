@@ -1,0 +1,189 @@
+{
+	"name": "cimapi-skills",
+	"version": "1.0.0",
+	"description": "Skill manifest generated from workspace folder structure and SKILL metadata.",
+	"entry": "SKILL/initialization-skill.md",
+	"categories": [
+		{
+			"id": "initialization",
+			"name": "Initialization",
+			"path": "SKILL/initialization-skill.md",
+			"summary": "SDK installation, plugin initialization, version query, common get/delete operations."
+		},
+		{
+			"id": "internet-map",
+			"name": "InternetMap",
+			"summary": "Map key configuration, POI search and management, navigation path workflows.",
+			"skills": [
+				{
+					"id": "keycommon",
+					"path": "SKILL/keycommon-skill.md",
+					"api": ["App.cim.InternetMapCommon"],
+					"tags": ["cimapi", "internet-map", "key"]
+				},
+				{
+					"id": "lifecircle",
+					"path": "SKILL/lifecircle-skill.md",
+					"api": ["App.cim.InternetMapLifeCircle"],
+					"tags": ["cimapi", "internet-map", "life-circle", "range"]
+				},
+				{
+					"id": "poi-search-bytext",
+					"path": "SKILL/searchbytext-skill.md",
+					"api": ["App.cim.InternetMapPoi"],
+					"tags": ["cimapi", "internet-map", "poi", "search", "scene"]
+				},
+				{
+					"id": "poi-search-bypolygon",
+					"path": "SKILL/searchbypolygon-skill.md",
+					"api": ["App.cim.InternetMapPoiByPolygon"],
+					"tags": ["cimapi", "internet-map", "poi", "polygon", "search", "scene"]
+				},
+				{
+					"id": "poi-search-bycircle",
+					"path": "SKILL/searchbycircle-skill.md",
+					"api": ["App.cim.InternetMapPoiByCircle"],
+					"tags": ["cimapi", "internet-map", "poi", "circle", "search", "scene"]
+				},
+				{
+					"id": "poi-search-byscreen",
+					"path": "SKILL/searchbyscreen-skill.md",
+					"api": ["App.cim.InternetMapPoiByScreen"],
+					"tags": ["cimapi", "internet-map", "poi", "screen", "search", "scene"]
+				},
+				{
+					"id": "poi-get",
+					"path": "SKILL/poiget-skill.md",
+					"api": ["App.cim.InternetMapPoiGet"],
+					"tags": ["cimapi", "internet-map", "poi", "get", "scene"]
+				},
+				{
+					"id": "poi-reset",
+					"path": "SKILL/poireset-skill.md",
+					"api": ["App.cim.InternetMapPoiReset"],
+					"tags": ["cimapi", "internet-map", "poi", "reset"]
+				},
+				{
+					"id": "map-path-search",
+					"path": "SKILL/searchpath-skill.md",
+					"api": ["App.InternetMapPath"],
+					"tags": ["cimapi", "internet-map", "navigation", "path", "scene"]
+				},
+				{
+					"id": "map-path-get",
+					"path": "SKILL/getpath-skill.md",
+					"api": ["InternetMapPath.GetNaviPath"],
+					"tags": ["cimapi", "internet-map", "navigation", "path", "scene"]
+				},
+				{
+					"id": "map-path-select",
+					"path": "SKILL/selectpath-skill.md",
+					"api": ["InternetMapPath.SelectNaviPath"],
+					"tags": ["cimapi", "internet-map", "navigation"]
+				}
+			]
+		},
+		{
+			"id": "spatial",
+			"name": "Spatial",
+			"summary": "Spatial analysis entities and style/update workflows.",
+			"skills": [
+				{
+					"id": "openness",
+					"path": "SKILL/openness-skill.md",
+					"api": ["App.OpennessAnalysis"],
+					"tags": ["cimapi", "analysis", "openness", "scene", "visualization"]
+				},
+				{
+					"id": "contour",
+					"path": "SKILL/contour-skill.md",
+					"api": ["App.ContourAnalysis"],
+					"tags": ["cimapi", "analysis", "contour", "scene", "visualization"]
+				},
+				{
+					"id": "sunlight",
+					"path": "SKILL/sunlight-skill.md",
+					"api": ["App.SunLightAnalysis"],
+					"tags": ["cimapi", "analysis", "sunlight", "scene", "simulation"]
+				},
+				{
+					"id": "skyline",
+					"path": "SKILL/skyline-skill.md",
+					"api": ["App.SkyLineAnalysis"],
+					"tags": ["wdpapi", "analysis", "skyline", "scene", "visualization"]
+				},
+				{
+					"id": "dig-terrain",
+					"path": "SKILL/digterrain-skill.md",
+					"api": ["App.DigTerrainAnalysis"],
+					"tags": ["cimapi", "analysis", "dig-terrain", "earthwork", "scene"]
+				},
+				{
+					"id": "intervisible",
+					"path": "SKILL/intervisible-skill.md",
+					"api": ["App.IntervisibleAnalysis"],
+					"tags": ["wdpapi", "analysis", "intervisible", "line-of-sight", "scene"]
+				},
+				{
+					"id": "height-limit",
+					"path": "SKILL/heightlimit-skill.md",
+					"api": ["App.HeightLimitAnalysis"],
+					"tags": ["wdpapi", "analysis", "height-limit", "scene", "visualization"]
+				}
+			]
+		},
+		{
+			"id": "hospital",
+			"name": "Hospital",
+			"summary": "Hospital scene capabilities for elevators, room boxes and attached devices.",
+			"skills": [
+				{
+					"id": "elevator",
+					"path": "SKILL/elevator-skill.md",
+					"api": ["App.HimElevator"],
+					"tags": ["cimapi", "hospital", "elevator", "scene", "interaction"]
+				},
+				{
+					"id": "box",
+					"path": "SKILL/box-skill.md",
+					"api": ["App.HimRoomBox"],
+					"tags": ["cimapi", "hospital", "room-box", "scene", "interaction"]
+				},
+				{
+					"id": "device",
+					"path": "SKILL/device-skill.md",
+					"api": ["App.HimAttachedDevice"],
+					"tags": ["cimapi", "hospital", "attached-device", "management", "scene"]
+				}
+			]
+		}
+	],
+	"skillIndex": [
+		"SKILL/initialization-skill.md",
+		"SKILL/keycommon-skill.md",
+		"SKILL/lifecircle-skill.md",
+		"SKILL/getpath-skill.md",
+		"SKILL/searchpath-skill.md",
+		"SKILL/selectpath-skill.md",
+		"SKILL/poiget-skill.md",
+		"SKILL/poireset-skill.md",
+		"SKILL/searchbycircle-skill.md",
+		"SKILL/searchbypolygon-skill.md",
+		"SKILL/searchbyscreen-skill.md",
+		"SKILL/searchbytext-skill.md",
+		"SKILL/contour-skill.md",
+		"SKILL/digterrain-skill.md",
+		"SKILL/heightlimit-skill.md",
+		"SKILL/intervisible-skill.md",
+		"SKILL/openness-skill.md",
+		"SKILL/skyline-skill.md",
+		"SKILL/sunlight-skill.md",
+		"SKILL/box-skill.md",
+		"SKILL/device-skill.md",
+		"SKILL/elevator-skill.md"
+	],
+	"stats": {
+		"categoryCount": 4,
+		"skillCount": 22
+	}
+}
