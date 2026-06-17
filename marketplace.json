@@ -1,0 +1,21 @@
+{
+  "name": "cim-marketplace",
+  "metadata": {
+    "description": "CIM plugin marketplace",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "ouyangwenzhe-51aes"
+  },
+  "plugins": [
+    {
+      "name": "cimapi-skills",
+      "description": "CIM API skills plugin",
+      "version": "1.0.0",
+      "source": {
+        "source": "github",
+        "repo": "ouyangwenzhe-51aes/cim-skills"
+      }
+    }
+  ]
+}
