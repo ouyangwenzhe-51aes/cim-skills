@@ -94,20 +94,3 @@
 3. 修改 API 标识时，以技能文档中的示例调用为准
 4. 修改后建议做一次 JSON 解析校验，确保 manifest 可被正常读取
 
-## 快速检查命令（PowerShell）
-
-```powershell
-Get-Content "manifest.json" -Raw | ConvertFrom-Json | Out-Null
-Write-Output "manifest json ok"
-```
-
-```powershell
-$m = Get-Content "manifest.json" -Raw | ConvertFrom-Json
-$missing = @()
-foreach ($p in $m.skillIndex) {
-	if (-not (Test-Path (Join-Path (Get-Location) $p))) {
-		$missing += $p
-	}
-}
-$missing
-```
