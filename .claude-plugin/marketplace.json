@@ -1,20 +1,21 @@
 {
-    "name":  "cimapi-skills",
-    "owner":  {
-                  "name":  "ouyangwenzhe-51aes",
-                  "url":  "https://github.com/ouyangwenzhe-51aes"
-              },
-    "plugins":  [
-                    {
-                        "name":  "cimapi-skills",
-                        "description":  "CIM API skills plugin — 22 skills across initialization, internet map, spatial analysis, and hospital scenes.",
-                        "version":  "1.0.0",
-                        "author":  {
-                                       "name":  "ouyangwenzhe-51aes",
-                                       "url":  "https://github.com/ouyangwenzhe-51aes"
-                                   },
-                        "homepage":  "https://github.com/ouyangwenzhe-51aes/cim-skills",
-                        "source":  "./"
-                    }
-                ]
+  "name": "cim-marketplace",
+  "description": "CIM plugin marketplace",
+  "owner": {
+    "name": "ouyangwenzhe-51aes",
+    "url": "https://github.com/ouyangwenzhe-51aes"
+  },
+  "plugins": [
+    {
+      "name": "cimapi-skills",
+      "description": "CIM API skills plugin — 22 skills across initialization, internet map, spatial analysis, and hospital scenes.",
+      "version": "1.0.0",
+      "source": "./",
+      "homepage": "https://github.com/ouyangwenzhe-51aes/cim-skills",
+      "author": {
+        "name": "ouyangwenzhe-51aes",
+        "url": "https://github.com/ouyangwenzhe-51aes"
+      }
+    }
+  ]
 }
