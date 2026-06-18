@@ -10,7 +10,7 @@
                     {
                         "name":  "cimapi-skills",
                         "description":  "51WORLD CIM API skills plugin. Install once, use from Cursor and every other compatible agent harness.",
-                        "version":  "1.3.0",
+                        "version":  "1.4.0",
                         "source":  "./",
                         "homepage":  "https://github.com/ouyangwenzhe-51aes/cim-skills",
                         "author":  {

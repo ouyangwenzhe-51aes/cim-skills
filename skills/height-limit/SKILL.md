@@ -2,10 +2,10 @@
 name: height-limit
 description: >
   限高分析工具（App.HeightLimitAnalysis）。提供限高分析对象创建、场景挂载与分析参数更新能力。当需要对场景进行限高检测、标记超限区域、配置限高阈值与效果颜色，或在运行时更新分析参数时，使用该工具。
-version: "1.3.0"
+version: "1.4.0"
 valid_until: "2026-12-18"
 metadata: 
-  version: 1.3.0
+  version: 1.4.0
   tags: [wdpapi, analysis, height-limit, scene, visualization]
 ---
 

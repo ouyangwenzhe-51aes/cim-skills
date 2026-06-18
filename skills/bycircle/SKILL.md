@@ -2,10 +2,10 @@
 name: bycircle
 description: >
   POI圆形搜索工具（App.cim.InternetMapPoiByCircle）。根据圆心坐标和半径范围搜索POI点位，并支持自定义样式挂载到场景。当需要以圆形区域为范围搜索周边POI点位、按分类筛选结果并配置POI样式挂载到场景时，使用该工具。
-version: "1.3.0"
+version: "1.4.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.3.0
+  version: 1.4.0
   tags: [cimapi, internet-map, poi, circle, search, scene]
 ---
 

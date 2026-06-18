@@ -2,10 +2,10 @@
 name: intervisible
 description: >
  通视分析工具（App.IntervisibleAnalysis）。提供通视分析对象创建、场景挂载与显示参数更新能力。当需要检测观察点与目标点之间是否可视、分析视线遮挡情况并区分可视与遮挡区域时，使用该工具。
-version: "1.3.0"
+version: "1.4.0"
 valid_until: "2026-12-18"
 metadata: 
-  version: 1.3.0
+  version: 1.4.0
   tags: [wdpapi, analysis, intervisible, line-of-sight, scene]
 ---
 
