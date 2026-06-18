@@ -2,10 +2,10 @@
 name: get-path
 description: >
   获取已添加到场景中的导航路径对象数据，并支持对路径进行显隐、更新、删除与聚焦操作。当需要获取场景中已存在的导航路径并对其进行显隐控制、样式更新、删除或聚焦操作时，使用该工具。
-version: "1.0.0"
+version: "1.2.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.0.0
+  version: 1.2.0
   tags: [cimapi, internet-map, navigation, path, scene]
 ---
 

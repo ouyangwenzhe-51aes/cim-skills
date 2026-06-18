@@ -1,5 +1,5 @@
 name: cimapi-skills
-version: 1.0.0
+version: 1.2.0
 description: 51WORLD CIM API skills covering SDK initialization, internet map workflows, spatial analysis, and hospital scene capabilities. Install once, use across Copilot, Claude, Cursor, and other APM-compatible agent harnesses.
 
 # Marketplace authoring: source of truth for .claude-plugin/marketplace.json.
@@ -10,8 +10,8 @@ marketplace:
     url: https://github.com/ouyangwenzhe-51aes
   packages:
     - name: cimapi-skills
-      description: CIM API skills plugin — 22 skills across initialization, internet map, spatial analysis, and hospital scenes.
-      version: 1.0.0
+      description: CIM API skills plugin — 23 skills across precheck, initialization, internet map, spatial analysis, and hospital scenes.
+      version: 1.2.0
       source: ./
       homepage: https://github.com/ouyangwenzhe-51aes/cim-skills
       author:

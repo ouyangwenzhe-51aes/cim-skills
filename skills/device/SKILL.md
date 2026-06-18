@@ -2,10 +2,10 @@
 name: device
 description: >
   附属设备管理工具（App.HimAttachedDevice）。提供附属设备模板创建、附属设备管理、删除附属设备、删除模板与获取附属设备列表能力。当需要为主模型创建可复用的附属设备模板、将模板中的附属设备批量应用到其他模型对象，或删除指定模型的附属设备或清理模板的场景时，使用该工具。
-version: "1.0.0"
+version: "1.2.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.0.0
+  version: 1.2.0
   tags: [cimapi, hospital, attached-device, management, scene]
 ---
 

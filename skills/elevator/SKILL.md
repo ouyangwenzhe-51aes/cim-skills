@@ -1,10 +1,10 @@
 ---
 name: elevator
 description: 电梯管理模块。提供电梯对象创建、样式更新、显示隐藏、高度设置、高亮控制、window 显示控制与交互事件能力。当在 3D 场景中添加或更新电梯并配置其外观样式，控制电梯的升降运动、显隐状态和高亮效果，为电梯绑定信息弹窗，或需要监听电梯的鼠标交互事件时，使用该工具。
-version: "1.0.0"
+version: "1.2.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.0.0
+  version: 1.2.0
   tags: [cimapi, hospital, elevator, scene, interaction]
 ---
 

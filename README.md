@@ -6,9 +6,9 @@
 
 ## 项目概览
 
-- 技能总数：22
-- 一级分类：4（Initialization / InternetMap / Spatial / Hospital）
-- 入口技能：`skills/initialization/SKILL.md`
+- 技能总数：23
+- 一级分类：5（Precheck / Initialization / InternetMap / Spatial / Hospital）
+- 入口技能：`skills/00-skill-version-check/SKILL.md`
 
 ## 目录结构
 
@@ -47,7 +47,17 @@ apm install ouyangwenzhe-51aes/cim-skills
 
 ## 能力覆盖
 
-### 1) Initialization
+### 1) Precheck
+
+- 前置版本检查（先于其他技能执行）
+- 执行 `scripts/outdated.ps1` 检查已安装插件是否落后
+- 若存在新版本，提示执行 `apm update cimapi-skills`
+
+对应文档：
+
+- `skills/00-skill-version-check/SKILL.md`
+
+### 2) Initialization
 
 - SDK 安装与插件初始化
 - 版本查询
@@ -57,7 +67,7 @@ apm install ouyangwenzhe-51aes/cim-skills
 
 - `skills/initialization/SKILL.md`
 
-### 2) InternetMap
+### 3) InternetMap
 
 - 地图 key 配置
 - POI 搜索（文本/多边形/圆形/屏幕）
@@ -78,7 +88,7 @@ apm install ouyangwenzhe-51aes/cim-skills
 - `skills/get-path/SKILL.md`
 - `skills/select-path/SKILL.md`
 
-### 3) Spatial
+### 4) Spatial
 
 - 开敞度
 - 等高线
@@ -98,7 +108,7 @@ apm install ouyangwenzhe-51aes/cim-skills
 - `skills/intervisible/SKILL.md`
 - `skills/height-limit/SKILL.md`
 
-### 4) Hospital
+### 5) Hospital
 
 - 电梯管理
 - 房间色块
