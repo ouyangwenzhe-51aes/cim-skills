@@ -2,6 +2,8 @@
 name: contour
 description: >
  等高线分析工具（App.ContourAnalysis）。提供等高线分析对象创建、场景挂载与等高线/等高面样式配置能力。当需要对指定区域进行地形高程分析、创建等高线或等高面可视化效果并挂载到场景时，使用该工具。
+version: "1.0.0"
+valid_until: "2026-12-18"
 metadata: 
   version: 1.0.0
   tags: [cimapi, analysis, contour, scene, visualization]

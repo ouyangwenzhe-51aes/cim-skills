@@ -2,6 +2,8 @@
 name: bytext
 description: >
     POI文字搜索工具（App.cim.InternetMapPoi）。根据文字关键词搜索POI点位，并支持自定义样式挂载到场景。当需要根据文字关键词搜索周边POI点位、按分类筛选结果并配置POI样式挂载到场景时，使用该工具。
+version: "1.0.0"
+valid_until: "2026-12-18"
 metadata: 
   version: 1.0.0
   tags: [cimapi, internet-map, poi, search, scene]

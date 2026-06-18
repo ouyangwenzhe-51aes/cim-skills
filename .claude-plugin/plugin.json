@@ -1,22 +1,22 @@
 {
-  "name": "cimapi-skills",
-  "description": "51WORLD CIM API (@wdp-api/cim-api) skills — SDK initialization, internet map (key config, POI search/get/reset, navigation paths), spatial analysis (openness, contour, sunlight, skyline, dig-terrain, intervisible, height-limit), and hospital scene capabilities (elevator, room box, attached device).",
-  "version": "1.1.0",
-  "author": {
-    "name": "ouyangwenzhe-51aes",
-    "url": "https://github.com/ouyangwenzhe-51aes"
-  },
-  "homepage": "https://github.com/ouyangwenzhe-51aes/cim-skills",
-  "repository": "https://github.com/ouyangwenzhe-51aes/cim-skills",
-  "license": "MIT",
-  "keywords": [
-    "cimapi",
-    "skills",
-    "internet-map",
-    "poi",
-    "navigation",
-    "spatial-analysis",
-    "hospital"
-  ],
-  "skills": "./skills/"
+    "name":  "cimapi-skills",
+    "description":  "51WORLD CIM API (@wdp-api/cim-api) skills — SDK initialization, internet map (key config, POI search/get/reset, navigation paths), spatial analysis (openness, contour, sunlight, skyline, dig-terrain, intervisible, height-limit), and hospital scene capabilities (elevator, room box, attached device).",
+    "version":  "1.0.0",
+    "author":  {
+                   "name":  "ouyangwenzhe-51aes",
+                   "url":  "https://github.com/ouyangwenzhe-51aes"
+               },
+    "homepage":  "https://github.com/ouyangwenzhe-51aes/cim-skills",
+    "repository":  "https://github.com/ouyangwenzhe-51aes/cim-skills",
+    "license":  "MIT",
+    "keywords":  [
+                     "cimapi",
+                     "skills",
+                     "internet-map",
+                     "poi",
+                     "navigation",
+                     "spatial-analysis",
+                     "hospital"
+                 ],
+    "skills":  "./skills/"
 }

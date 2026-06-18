@@ -15,6 +15,8 @@
 ```
 cim-skills/
 ├── plugin.json              # 插件描述符，声明 "skills": "./skills/"
+├── apm.yml                  # APM marketplace authoring source
+├── CHANGELOG.md             # 版本变更记录
 ├── .claude-plugin/          # Claude / Copilot 插件配置
 │   ├── plugin.json
 │   └── marketplace.json
@@ -26,6 +28,22 @@ cim-skills/
     ├── keycommon/SKILL.md
     └── ...
 ```
+
+## 安装与更新
+
+推荐使用带 tag 的固定版本安装：
+
+```powershell
+apm install ouyangwenzhe-51aes/cim-skills#v1.1.0
+```
+
+也可以安装最新主分支：
+
+```powershell
+apm install ouyangwenzhe-51aes/cim-skills
+```
+
+发布新版本后，用户通过重新执行对应版本的 `apm install` 获取更新。
 
 ## 能力覆盖
 
@@ -119,4 +137,38 @@ metadata:
 2. frontmatter 缩进统一使用 2 个空格，避免 TAB 与空格混用
 3. 修改 API 标识时，以技能文档中的示例调用为准
 4. 修改后建议对 `plugin.json`、`.claude-plugin/`、`.cursor-plugin/` 下的 JSON 做一次解析校验
+
+## 发版流程
+
+本项目按 APM 插件发版流程维护版本：
+
+1. 修改 `SKILL.md`，同步更新 frontmatter 的 `version` 和 `valid_until`
+2. 更新 `plugin.json`、`.claude-plugin/plugin.json`、`.cursor-plugin/plugin.json`、`apm.yml`、`CHANGELOG.md`
+3. 运行 `apm pack`，从 `apm.yml` 重新生成 marketplace 元数据
+4. 提交变更并打 tag，例如 `git tag v1.1.0 && git push origin HEAD && git push origin v1.1.0`
+5. 用户通过 `apm install ouyangwenzhe-51aes/cim-skills#v1.1.0` 获取更新
+
+可用脚本辅助同步版本字段：
+
+```powershell
+.\scripts\release.ps1 -Version 1.2.0 -RunApmPack
+```
+
+检查本地已安装版本是否落后于 marketplace 最新版本：
+
+```powershell
+.\scripts\outdated.ps1
+```
+
+如果发现新版本，会输出更新提示：
+
+```powershell
+apm update cimapi-skills
+```
+
+如需一并打 tag 并推送：
+
+```powershell
+.\scripts\release.ps1 -Version 1.2.0 -RunApmPack -Tag -Push
+```
 

@@ -2,6 +2,8 @@
 name: sunlight
 description: >
    日照分析工具（App.SunLightAnalysis），提供日照分析对象创建、场景挂载与时间区间日照计算配置能力。当需要按时间段评估指定区域的光照覆盖效果，进行建筑方案比选、住区采光评估、日照合规校核或公共空间舒适度分析时，使用该工具。
+version: "1.0.0"
+valid_until: "2026-12-18"
 metadata: 
   version: 1.0.0
   tags: [cimapi, analysis, sunlight, scene, simulation]
