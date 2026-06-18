@@ -2,10 +2,10 @@
 name: keycommon
 description: >
   设置高德地图key工具（App.cim.InternetMapCommon）。提供动态设置高德地图key能力。在在场景中需要加载高德地图底图并配置地图访问密钥时，使用该工具。
-version: "1.2.0"
+version: "1.3.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.2.0
+  version: 1.3.0
   tags: [cimapi, internet-map, key]
 ---
 

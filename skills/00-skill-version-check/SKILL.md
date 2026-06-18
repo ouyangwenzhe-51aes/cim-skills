@@ -3,10 +3,10 @@ name: 00-skill-version-check
 description: >
   前置版本检查技能。要求在读取本插件其他技能前优先执行：运行 scripts/outdated.ps1 检查本地已安装插件是否落后于 marketplace 版本；若存在新版本，提示用户执行更新命令并确认后再继续后续技能流程。
 
-version: "1.2.0"
+version: "1.3.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.2.0
+  version: 1.3.0
   tags: [cimapi, precheck, version, outdated, update]
 ---
 

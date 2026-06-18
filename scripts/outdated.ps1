@@ -71,8 +71,6 @@ function Compare-PreRelease {
         $cmp = [string]::CompareOrdinal($aPart, $bPart)
         if ($cmp -ne 0) { return $cmp }
     }
-
-    0
 }
 
 function Compare-SemVer {
@@ -156,30 +154,6 @@ if (-not $latest) {
 
 $localVersion = [string]$installed.Version
 $latestVersion = [string]$latest.version
-
-if ([string]::IsNullOrWhiteSpace($latestVersion)) {
-    $pluginJsonUrl = "https://raw.githubusercontent.com/$Owner/$Repo/$Branch/plugin.json"
-    try {
-        $remotePlugin = Invoke-RestMethod -Uri $pluginJsonUrl -Method Get -TimeoutSec 20
-        if ($remotePlugin.name -eq $PluginName -and $remotePlugin.version) {
-            $latestVersion = [string]$remotePlugin.version
-        }
-    }
-    catch {
-        # Keep marketplace as source of truth; fallback is best-effort only.
-    }
-}
-
-if ([string]::IsNullOrWhiteSpace($localVersion)) {
-    Write-Error "Installed plugin '$PluginName' has empty version in '$($installed.Source)'."
-    exit 1
-}
-
-if ([string]::IsNullOrWhiteSpace($latestVersion)) {
-    Write-Error "Latest version is missing in marketplace entry for '$PluginName': $remoteUrl"
-    exit 1
-}
-
 $cmp = Compare-SemVer -A $localVersion -B $latestVersion
 
 Write-Host "Plugin           : $PluginName"

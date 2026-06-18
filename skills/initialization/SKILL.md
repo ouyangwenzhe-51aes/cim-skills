@@ -3,10 +3,10 @@ name: initialization
 description: >
   CIM API SDK 安装初始化与通用行为。包含SDK安装、插件初始化（WdpApi + CimApi）、版本查询（App.cim.GetVersion），以及所有实体对象通用的属性获取（entityObj.Get）和删除（entityObj.Delete）操作。当需要初始化 CIM API SDK 并安装插件时；需要查询 SDK 或场景插件版本时；需要获取或删除场景中已创建的实体对象时，使用该工具。
 
-version: "1.2.0"
+version: "1.3.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.2.0
+  version: 1.3.0
   tags: [cimapi, init, plugin, version, get, delete, common]
 ---
 

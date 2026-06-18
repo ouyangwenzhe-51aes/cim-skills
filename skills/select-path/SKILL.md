@@ -2,10 +2,10 @@
 name: select-path
 description: >
   SelectNaviPath 提供选择地图提供三条导航路径其中之一。当需要从高德地图返回的多条导航路线中选择其中一条作为最终路径时，使用该工具。
-version: "1.2.0"
+version: "1.3.0"
 valid_until: "2026-12-18"
 metadata:
-  version: 1.2.0
+  version: 1.3.0
   tags: [cimapi, internet-map, navigation]
 ---
 

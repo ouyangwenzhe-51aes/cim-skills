@@ -9,7 +9,7 @@
                     {
                         "name":  "cimapi-skills",
                         "description":  "CIM API skills plugin — 23 skills across precheck, initialization, internet map, spatial analysis, and hospital scenes.",
-                        "version":  "1.2.0",
+                        "version":  "1.3.0",
                         "source":  "./",
                         "homepage":  "https://github.com/ouyangwenzhe-51aes/cim-skills",
                         "author":  {
