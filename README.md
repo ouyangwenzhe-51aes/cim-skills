@@ -124,6 +124,8 @@ apm install ouyangwenzhe-51aes/cim-skills
 
 加载器从 `plugin.json` 的 `"skills": "./skills/"` 入口，扫描 `skills/` 下的**子目录**，读取每个子目录中的 `SKILL.md` 作为一个技能。
 
+按目录命名约定，`00-skill-version-check` 必须作为首个读取的守门技能；其余技能目录保持在其后，确保任何业务技能都先经过版本检查。
+
 - 子目录名 = `SKILL.md` frontmatter 中的 `name` 字段
 - 技能正文文件名必须为 `SKILL.md`
 - 扁平的 `*.md` 文件不会被识别为技能
@@ -181,4 +183,3 @@ apm update cimapi-skills
 ```powershell
 .\scripts\release.ps1 -Version 1.2.0 -RunApmPack -Tag -Push
 ```
-

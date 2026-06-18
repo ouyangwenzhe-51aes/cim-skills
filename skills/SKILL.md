@@ -2,19 +2,11 @@
 name: sunlight
 description: >
    日照分析工具（App.SunLightAnalysis），提供日照分析对象创建、场景挂载与时间区间日照计算配置能力。当需要按时间段评估指定区域的光照覆盖效果，进行建筑方案比选、住区采光评估、日照合规校核或公共空间舒适度分析时，使用该工具。
-version: "1.4.0"
-valid_until: "2026-12-18"
+
 metadata: 
   version: 1.4.0
   tags: [cimapi, analysis, sunlight, scene, simulation]
 ---
-
-## 前置校验（统一门禁，必须先检查）
-
-- 先在当前会话中查找最近一次以 CIM_SKILL_GATE: 开头的门禁记录。
-- 仅当状态为 passed 或 bypassed_by_user 且未过期（48小时内）时，才继续执行本技能。
-- 若不存在门禁记录、状态不合法、或已过期（超过48小时），必须立即停止执行，并提示：请先执行 00-skill-version-check。
-- 禁止以自然语言推测门禁结果；必须基于该固定前缀记录判定。
 
 # App.SunLightAnalysis - 日照分析
 
@@ -73,6 +65,3 @@ const entityObj = new App.SunLightAnalysis({
 
 const res = await App.Scene.Add(entityObj);
 ~~~
-
-
-

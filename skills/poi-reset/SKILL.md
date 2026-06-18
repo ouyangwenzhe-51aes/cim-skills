@@ -1,9 +1,8 @@
----
+﻿---
 name: poi-reset
 description: >
   App.cim.InternetMapPoiReset 提供清除已搜索的POI的能力，支持按分类清除或清除全部。当需要清除场景中已搜索的POI对象、按指定分类清理或一次性清空所有POI时，使用该工具。
-version: "1.4.0"
-valid_until: "2026-12-18"
+
 metadata:
   version: 1.4.0
   tags: [cimapi, internet-map, poi, reset]
@@ -37,3 +36,4 @@ App.cim.InternetMapPoiReset 提供以下能力：
 const type = 'polygon'; //不填写则清除所有POI
 const res = await App.cim.InternetMapPoiReset(type);
 ~~~
+

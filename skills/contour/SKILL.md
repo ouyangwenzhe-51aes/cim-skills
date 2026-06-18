@@ -1,9 +1,8 @@
----
+﻿---
 name: contour
 description: >
  等高线分析工具（App.ContourAnalysis）。提供等高线分析对象创建、场景挂载与等高线/等高面样式配置能力。当需要对指定区域进行地形高程分析、创建等高线或等高面可视化效果并挂载到场景时，使用该工具。
-version: "1.4.0"
-valid_until: "2026-12-18"
+
 metadata: 
   version: 1.4.0
   tags: [cimapi, analysis, contour, scene, visualization]
@@ -75,3 +74,5 @@ const res = await App.Scene.Add(entityObj);
 ### 成员函数
 
 当前截图未提供成员函数（如 Update(object)）的定义与参数说明，后续补充资料后可按同模板继续完善。
+
+

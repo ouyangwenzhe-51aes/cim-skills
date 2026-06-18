@@ -1,10 +1,8 @@
 ---
 name: 00-skill-version-check
 description: >
-  前置版本检查技能。要求在读取本插件其他技能前优先执行：运行 scripts/outdated.ps1 检查本地已安装插件是否落后于 marketplace 版本；若存在新版本，提示用户执行更新命令并确认后再继续后续技能流程。
+  前置版本检查技能。要求在读取其他技能前优先执行：运行 scripts/outdated.ps1 检查本地已安装插件是否落后于 marketplace 版本；若存在新版本，提示用户执行更新命令并确认后再继续后续技能流程。
 
-version: "1.4.0"
-valid_until: "2026-12-18"
 metadata:
   version: 1.4.0
   tags: [cimapi, precheck, version, outdated, update]
@@ -25,6 +23,7 @@ metadata:
      - 输出包含 `Local version (...) is newer than marketplace (...)`：本地版本更新，可继续后续技能。
    - 退出码 `2`：存在新版本，输出会包含 `Update available: x.y.z -> a.b.c` 与 `Run: apm update cimapi-skills`。
    - 退出码 `1`：检查失败（网络、路径或版本字段异常），需要先提示用户修复问题后再继续。
+
 
 ## 提示模板
 
@@ -50,3 +49,4 @@ metadata:
 
 - 本 skill 是前置守卫：未完成检查前，不应继续读取或执行其他业务 skill。
 - 若用户明确要求跳过更新，可继续，但需记录“用户已确认跳过更新”的决策。
+

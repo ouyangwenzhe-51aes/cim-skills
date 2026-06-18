@@ -1,9 +1,8 @@
----
+﻿---
 name: poi-get
 description: >
   获取已搜索的POI对象并进行操作（App.cim.InternetMapPoiGet）。当需要获取场景中已搜索的POI对象、按分类筛选、查询信息、控制显隐、更新样式、删除或聚焦到指定POI时，使用该工具。
-version: "1.4.0"
-valid_until: "2026-12-18"
+
 metadata:
   version: 1.4.0
   tags: [cimapi, internet-map, poi, get, scene]
@@ -107,4 +106,6 @@ await App.Scene.Delete(res.result.objects[type]);
 | visible2D.interaction.clickTop | boolean | 否 | true, false | 点击时是否显示在最上层 |
 | visible2D.interaction.hoverTop | boolean | 否 | true, false | 滑过时是否显示在最上层 |
 | visible2D.entity.overlapOrder | number | 否 | 1~10 | 重叠层级，数值越大越浮在最上层 |
+
+
 

@@ -19,6 +19,18 @@ if ([string]::IsNullOrWhiteSpace($InstallRoot)) {
     $InstallRoot = Join-Path $homeDir '.vscode\agent-plugins\github.com'
 }
 
+function Detect-Host {
+    param([string]$Payload)
+    if ($env:COPILOT_CLI -eq '1') { return 'copilot-cli' }
+    if ($Payload -match '"toolArgs"' -and $Payload -notmatch '"hook_event_name"') { return 'copilot-cli' }
+    if ($Payload -match '"hook_event_name"') {
+        if ($Payload -match '__vscode' -or $Payload -match '"transcript_path"[^"]*"[^"]*Code') { return 'vscode' }
+        return 'claude-code'
+    }
+    if ($env:CURSOR_PLUGIN_ROOT) { return 'cursor' }
+    return 'unknown'
+}
+
 function Parse-SemVer {
     param([Parameter(Mandatory = $true)][string]$Version)
 

@@ -1,9 +1,8 @@
----
+﻿---
 name: skyline
 description: >
    天际线分析工具（App.SkyLineAnalysis）。提供天际线分析对象创建、场景挂载、线条样式设置与截图输出参数配置能力。当需要分析场景建筑轮廓形成的天际线、渲染天际线效果并导出截图时，使用该工具。
-version: "1.4.0"
-valid_until: "2026-12-18"
+
 metadata: 
   version: 1.4.0
   tags: [wdpapi, analysis, skyline, scene, visualization]
@@ -88,3 +87,5 @@ const jsondata = {
 
 await cache.get("skyline").Update(jsondata);
 ~~~
+
+
