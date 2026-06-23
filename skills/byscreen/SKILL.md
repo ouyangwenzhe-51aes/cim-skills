@@ -3,6 +3,7 @@ name: byscreen
 description: >
   POI屏幕搜索工具（App.cim.InternetMapPoiByScreen）。根据当前屏幕视野范围搜索POI点位，并支持自定义样式挂载到场景。当需要根据当前屏幕视野范围搜索周边POI点位、按分类筛选结果并配置POI样式挂载到场景时，使用该工具。
 
+
 metadata: 
   version: 1.4.0
   tags: [cimapi, internet-map, poi, screen, search, scene]
