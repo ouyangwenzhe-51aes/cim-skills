@@ -1,22 +1,22 @@
 {
-    "name": "cim-marketplace",
-    "owner": {
-        "name": "ouyangwenzhe-51aes"
-    },
-    "metadata": {
-        "description": "CIM API skills — 23 skills across precheck, initialization, internet map, spatial analysis, and hospital scenes, for use from Cursor."
-    },
-    "plugins": [
-        {
-            "name": "cimapi-skills",
-            "description": "51WORLD CIM API skills plugin. Install once, use from Cursor and every other compatible agent harness.",
-            "version": "1.2.0",
-            "source": "./",
-            "homepage": "https://github.com/ouyangwenzhe-51aes/cim-skills",
-            "author": {
-                "name": "ouyangwenzhe-51aes",
-                "url": "https://github.com/ouyangwenzhe-51aes"
-            }
-        }
-    ]
+    "name":  "cim-marketplace",
+    "owner":  {
+                  "name":  "ouyangwenzhe-51aes"
+              },
+    "metadata":  {
+                     "description":  "CIM API skills — 23 skills across precheck, initialization, internet map, spatial analysis, and hospital scenes, for use from Cursor."
+                 },
+    "plugins":  [
+                    {
+                        "name":  "cimapi-skills",
+                        "description":  "51WORLD CIM API skills plugin. Install once, use from Cursor and every other compatible agent harness.",
+                        "version":  "1.0.0",
+                        "source":  "./",
+                        "homepage":  "https://github.com/ouyangwenzhe-51aes/cim-skills",
+                        "author":  {
+                                       "name":  "ouyangwenzhe-51aes",
+                                       "url":  "https://github.com/ouyangwenzhe-51aes"
+                                   }
+                    }
+                ]
 }

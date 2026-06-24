@@ -1,10 +1,12 @@
-﻿---
+---
 name: dig-terrain
 description: >
  填挖方分析工具（App.DigTerrainAnalysis）。提供填挖方分析对象创建、场景挂载与挖方深度配置能力。当需要对指定区域进行土方工程的填挖方分析、设置挖方深度并在场景中展示分析结果时，使用该工具。
 
+version: "1.0.0"
+valid_until: "2026-12-24"
 metadata: 
-  version: 1.4.0
+  version: 1.0.0
   tags: [cimapi, analysis, dig-terrain, earthwork, scene]
 ---
 

@@ -2,7 +2,7 @@
   "mcpServers": {
     "cim-skills": {
       "command": "python",
-      "args": ["${PLUGIN_ROOT}/mcp/cim_skills_mcp_server.py"]
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/cim_skills_mcp_server.py"]
     }
   }
 }

@@ -1,10 +1,12 @@
-﻿---
+---
 name: openness
 description: >
    开敞度分析工具（App.OpennessAnalysis）。提供开敞度分析对象创建、场景挂载与分析样式更新能力。当需要评估观察点周围的开敞程度、分析指定扇形区域内的可视与遮挡情况，并配置显示样式与显示模式时，使用该工具。   
 
+version: "1.0.0"
+valid_until: "2026-12-24"
 metadata: 
-  version: 1.4.0
+  version: 1.0.0
   tags: [cimapi, analysis, openness, scene, visualization]
 ---
 

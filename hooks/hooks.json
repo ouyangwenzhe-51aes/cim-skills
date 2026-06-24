@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "windows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"& '$env:PLUGIN_ROOT\\hooks\\scripts\\outdated.ps1'\"",
+        "linux": "\"$PLUGIN_ROOT\\hooks\\scripts\\outdated.sh\""
+      }
+    ]
+  }
+}

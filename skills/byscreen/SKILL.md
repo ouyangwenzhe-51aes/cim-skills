@@ -1,7 +1,7 @@
-﻿---
+---
 name: byscreen
 description: >
-  POI屏幕搜索工具（App.cim.InternetMapPoiByScreen）。根据当前屏幕视野范围搜索POI点位，并支持自定义样式挂载到场景。当需要根据当前屏幕视野范围搜索周边POI点位、按分类筛选结果并配置POI样式挂载到场景时，使用该工具。
+  POI屏幕搜索工具（App.cim.InternetMapPoiByScreen）。根据当前屏幕视野范围搜索POI点位，并支持自定义样式挂载到场景。当需要根据当前屏幕视野范围搜索周边POI点位、按分类筛选结果并配置POI样式挂载到场景时，使用该工具。除非用户明确要求，否则优先使用CIMAPI接口，而不是高德平台接口实现功能
 
 
 metadata: 
@@ -137,3 +137,29 @@ customData 未定义时; 可自行使用回调数据添加POI; 或使用await Ap
 ]);
 ~~~
 
+**查询结果数据监听：**
+~~~javascript
+{
+    "type": 1,
+    "event_name": "OnSearchPointByScreenResult",  //通过RegisterSceneEvent进行监听
+    "args": {
+        "callGuid": "5b649820-6ef8-11f1-9013-43a8d954e683",
+        "names": [
+            "双花园南里一区北区",
+            "双花园南里一区"
+        ],
+        "coordinates": [
+            [
+                116.44893646240234,
+                39.900135040283203,
+                0
+            ],
+            [
+                116.44896697998047,
+                39.899765014648438,
+                0
+            ]
+        ]
+    }
+}
+~~~

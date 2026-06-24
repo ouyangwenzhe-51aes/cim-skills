@@ -1,10 +1,12 @@
-﻿---
+---
 name: poi-get
 description: >
   获取已搜索的POI对象并进行操作（App.cim.InternetMapPoiGet）。当需要获取场景中已搜索的POI对象、按分类筛选、查询信息、控制显隐、更新样式、删除或聚焦到指定POI时，使用该工具。
 
+version: "1.0.0"
+valid_until: "2026-12-24"
 metadata:
-  version: 1.4.0
+  version: 1.0.0
   tags: [cimapi, internet-map, poi, get, scene]
 ---
 

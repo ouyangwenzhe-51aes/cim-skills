@@ -1,10 +1,12 @@
-﻿---
+---
 name: box
 description: >
  空间管理工具（App.HimRoomBox）。提供通过 geojson 加载 room 色块、色块控制、聚焦与查询能力。当需要通过 geojson 数据在场景中加载房间色块时；需要控制房间色块的颜色、高亮、显隐状态时；需要聚焦到指定房间或获取房间中心点坐标时；需要获取房间列表或监听房间的鼠标交互事件时，使用该工具。
 
+version: "1.0.0"
+valid_until: "2026-12-24"
 metadata:
-  version: 1.4.0
+  version: 1.0.0
   tags: [cimapi, hospital, room-box, scene, interaction]
 ---
 

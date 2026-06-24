@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "windows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\Users\\ouyangwenzhe\\.vscode\\agent-plugins\\github.com\\ouyangwenzhe-51aes\\cim-skills\\hooks\\scripts\\outdated.ps1"
+      }
+    ]
+  }
+}

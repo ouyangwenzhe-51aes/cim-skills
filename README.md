@@ -6,7 +6,7 @@
 
 ## 项目概览
 
-- 技能总数：23
+- 技能总数：22
 - 一级分类：5（Precheck / Initialization / InternetMap / Spatial / Hospital）
 - 入口技能：`skills/00-skill-version-check/SKILL.md`
 
@@ -181,10 +181,22 @@ metadata:
 4. 提交变更并打 tag，例如 `git tag v1.4.0 && git push origin HEAD && git push origin v1.4.0`
 5. 用户通过 `apm install ouyangwenzhe-51aes/cim-skills#v1.4.0` 获取更新
 
+安装apm：
+
+windows：
+```powershell 
+ irm https://aka.ms/apm-windows | iex
+```
+
+linux/macOS：
+```bash
+curl -sSL https://aka.ms/apm-unix | sh
+```
+
 可用脚本辅助同步版本字段：
 
 ```powershell
-.\dev-scripts\release.ps1 -Version 1.2.0 -RunApmPack
+.\dev-scripts\release.ps1 -Version "1.1.0" 
 ```
 
 检查本地已安装版本是否落后于 marketplace 最新版本：

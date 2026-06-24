@@ -1,4 +1,4 @@
-﻿---
+---
 name: search-path
 description: >
   导航路径工具（App.InternetMapPath）。提供两点间导航路线创建、场景挂载、路径删除与自定义路径样式能力。当需要基于高德地图在两点之间创建导航路径、自定义路径样式或删除已有导航路径时，使用该工具。
@@ -83,6 +83,43 @@ const entityObj = new App.InternetMapPath({
 			"coordZOffset": 20 //高度(单位:米)
 		}
 	}
+});
+
+const { success, result } = await App.Scene.Add(entityObj);
+cache.set('mappath', entityObj);
+~~~
+
+
+**返回事件监听：**
+
+~~~javascript
+{
+    "type": 1,
+    "event_name": "OnNaviPathResult", //通过RegisterSceneEvent进行监听
+    "args": {
+        "naviPathDetails": [  //可能会有多条结果路径
+            {
+                "duration": "240.0",  
+                "distance": "1569.0",
+                "trafficlights": "0.0",
+                "coordinates": [
+                    [
+                        116.4522705078125,
+                        39.902301788330078,
+                        0
+                    ],
+                    [
+                        116.45233917236328,
+                        39.90234375,
+                        0
+                    ]
+                ],
+                "waypoints": "双花园商业街;庆丰公园步道;庆丰公园步道;双花园商业街;"
+            }
+        ],
+        "callGuid": "55788670-6f8d-11f1-bb91-a31ca80222b1"
+    }
+}
 });
 
 const { success, result } = await App.Scene.Add(entityObj);
