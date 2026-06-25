@@ -43,23 +43,10 @@
 **Claude Code Plugin (recommended):**
 ```
 claude plugin marketplace add ouyangwenzhe-51aes/cim-skills
-claude plugin install cim-skills@cim-skills
 ```
 Claude Code model-activates skills by `description` field when they match the user's task.
-
-**MCP Server (Claude Desktop, Cursor, Cline, custom agents):**
-The `mcp/` directory ships a Model Context Protocol server exposing five tools — `list_skills`, `get_skill`, `list_agents`, `get_benchmark`, `run_skill`. Add to your `mcpServers` config:
-```json
-{
-  "mcpServers": {
-    "cim-skills": {
-      "command": "python",
-      "args": ["<absolute-path>/cim-skills/mcp/cim_skills_mcp_server.py"]
-    }
-  }
-}
 ```
-Setup: [mcp/README.md](mcp/README.md). All 22 skills tested against CIM API v1.4.0.
+Setup: [mcp/README.md](mcp/README.md). All 22 skills tested against CIM API v1.0.0.
 
 **GitHub Copilot (via Agency marketplace):**
 Skills are listed in the Agency marketplace. Install per the marketplace instructions.
@@ -80,7 +67,7 @@ Each skill declares typed schemas in its SKILL.md YAML frontmatter:
 
 - **`name`** — skill identifier (e.g., `initialization`, `box`, `contour`)
 - **`description`** — machine-readable capability description with use case guidance
-- **`metadata.version`** — API version (all at 1.4.0)
+- **`metadata.version`** — API version (all at 1.0.0)
 - **`metadata.tags`** — capability tags for routing (e.g., `[cimapi, analysis, contour, visualization]`)
 
 Each skill documents:
@@ -96,11 +83,6 @@ This is the contract an orchestrator uses to route tasks. Each skill is self-con
 
 For issues, feature requests, or skill updates related to CIM API changes: open a GitHub issue with version details and affected skills.
 
-For changes to individual skills:
-1. Update the SKILL.md file with new methods/parameters
-2. Update version number in metadata
-3. Test against CIM API version
-4. Submit PR with changelog entry
 
 ## Example Invocation
 
@@ -111,9 +93,6 @@ Create a 3D scene with contour analysis visualization at coordinates [116.4, 39.
 
 **Output:** Contour skill documentation + context → LLM generates complete implementation using App.ContourAnalysis with proper scene mounting, styling, and cleanup patterns.
 
-## License
-
-MIT
 
 ## Links
 
