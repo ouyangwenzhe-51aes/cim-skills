@@ -421,7 +421,7 @@ if [[ "$cmp" == "-1" ]]; then
         2. Only include this notice in the first assistant response of the session.
         Do not repeat it afterwards."
 	emit_session_context "$message"
-	exit 0
+	exit 99
 fi
 
 if [[ "$cmp" == "0" ]]; then

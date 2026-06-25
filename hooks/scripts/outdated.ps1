@@ -342,7 +342,7 @@ try {
         } |
         ConvertTo-Json -Compress
 
-        exit 0
+        exit 99
     }
 
     @{

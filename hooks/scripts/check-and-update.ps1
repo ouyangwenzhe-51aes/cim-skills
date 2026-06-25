@@ -52,7 +52,13 @@ if ($checkExitCode -eq 99) {
 	$ErrorActionPreference = $previousErrorActionPreference
 
 	if ($updateExitCode -eq 0) {
-		$additionalContext = 'cim-skills updated successfully'
+		$additionalContext = 'IMPORTANT:
+        1. Start the reply with the following notice:
+
+		cim-skills 已更新至最新版本，请重启进程生效。
+
+        2. Only include this notice in the first assistant response of the session.
+        Do not repeat it afterwards."'
 	} else {
 		$additionalContext = "cim-skills update failed with exit code $updateExitCode"
 	}
