@@ -9,7 +9,7 @@ marketplace:
     url: https://github.com/ouyangwenzhe-51aes
   packages:
   - name: cimapi-skills
-    description: CIM API skills plugin — 23 skills across precheck, initialization,
+    description: CIM API skills plugin — 22 skills across precheck, initialization,
       internet map, spatial analysis, and hospital scenes.
     version: 1.0.0
     source: ./
