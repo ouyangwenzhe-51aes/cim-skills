@@ -153,12 +153,11 @@ cim-skills/
 
 发布新版本：
 
-```powershell
-.\dev-scripts\release.ps1 -Version "1.1.0" 
 ```
+# powershell
+# 1. 更新版本号
+python ./dev-scripts/release.py -version 1.0.0 [--valid-until VALID_UNTIL] 
 
-打 tag 并推送：
-
-```powershell
-.\dev-scripts\release.ps1 -Version 1.1.0 -RunApmPack -Tag -Push
+2. 同时打 tag 并推送
+python ./dev-scripts/release.py -version 1.0.0 --tag --push
 ```

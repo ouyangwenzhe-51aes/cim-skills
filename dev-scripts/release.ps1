@@ -6,7 +6,6 @@ param(
 
     [string]$ValidUntil = (Get-Date).AddMonths(6).ToString('yyyy-MM-dd'),
 
-    [switch]$RunApmPack,
     [switch]$Tag,
     [switch]$Push
 )
@@ -44,13 +43,6 @@ function Set-MarketplaceVersion($Path) {
     Write-JsonFile $Path $json
 }
 
-function Set-ApmVersion($Path) {
-    $text = [System.IO.File]::ReadAllText((Resolve-Path $Path), [System.Text.Encoding]::UTF8)
-    $text = $text -replace '(?m)^version:\s*.*$', "version: $Version"
-    $text = $text -replace '(?m)^(\s+version:)\s*.*$', "`$1 $Version"
-    [System.IO.File]::WriteAllText((Resolve-Path $Path), $text, $Utf8NoBom)
-}
-
 function Set-SkillVersion($Path) {
     $text = [System.IO.File]::ReadAllText((Resolve-Path $Path), [System.Text.Encoding]::UTF8)
 
@@ -74,7 +66,6 @@ Set-JsonVersion '.claude-plugin/plugin.json'
 Set-JsonVersion '.cursor-plugin/plugin.json'
 Set-MarketplaceVersion '.claude-plugin/marketplace.json'
 Set-MarketplaceVersion '.cursor-plugin/marketplace.json'
-Set-ApmVersion 'apm.yml'
 
 Get-ChildItem 'skills' -Recurse -Filter 'SKILL.md' | ForEach-Object {
     Set-SkillVersion $_.FullName
@@ -85,15 +76,6 @@ Get-Content '.claude-plugin/plugin.json' -Raw | ConvertFrom-Json | Out-Null
 Get-Content '.claude-plugin/marketplace.json' -Raw | ConvertFrom-Json | Out-Null
 Get-Content '.cursor-plugin/plugin.json' -Raw | ConvertFrom-Json | Out-Null
 Get-Content '.cursor-plugin/marketplace.json' -Raw | ConvertFrom-Json | Out-Null
-
-if ($RunApmPack) {
-    $apm = Get-Command apm -ErrorAction SilentlyContinue
-    if (-not $apm) {
-        Write-Warning 'apm command not found. Install APM first, then run: apm pack'
-    } else {
-        apm pack
-    }
-}
 
 if ($Tag) {
     $tagName = "v$Version"
@@ -111,6 +93,4 @@ if ($Tag) {
 Write-Host "Release files updated for version $Version (valid_until: $ValidUntil)."
 Write-Host 'Next steps:'
 Write-Host '  1. Update CHANGELOG.md with human-readable release notes.'
-Write-Host '  2. Run apm pack if marketplace JSON must be regenerated.'
-Write-Host "  3. Commit changes, then tag and push: git tag v$Version; git push origin HEAD; git push origin v$Version"
-Write-Host "  4. Users update with: apm install ouyangwenzhe-51aes/cim-skills#v$Version"
+Write-Host "  2. Commit changes, then tag and push: git tag v$Version; git push origin HEAD; git push origin v$Version"
