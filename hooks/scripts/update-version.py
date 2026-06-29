@@ -13,6 +13,11 @@ import tempfile
 import urllib.request
 import zipfile
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 DOWNLOAD_URL = "https://github.com/ouyangwenzhe-51aes/cim-skills/archive/refs/heads/main.zip"
 DEFAULT_DESTINATION_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "..")
@@ -69,6 +74,8 @@ def install(extracted_root: str, destination: str) -> None:
     print(f"Installing to destination: {destination}")
     if os.path.exists(destination):
         for item in os.listdir(destination):
+            if item == ".git":
+                continue
             item_path = os.path.join(destination, item)
             if os.path.isdir(item_path):
                 shutil.rmtree(item_path)

@@ -13,30 +13,30 @@
 
 ## Skills
 
-| Skill | Domain | Capabilities | Lines | Version |
-|-------|--------|-----------|-------|---------|
-| initialization | Foundation | SDK install, plugin initialization, version query, get/delete operations | 200 | 1.2.0 |
-| box | Hospital | Room color blocks (geojson), color control, highlight, visibility, focus | 150 | 1.2.0 |
-| device | Hospital | Attached device templates, management, deletion, listing | 200 | 1.2.0 |
-| elevator | Hospital | Elevator creation, styling, animation, visibility, highlight, events | 180 | 1.2.0 |
-| keycommon | Internet Map | Configure Amap (高德地图) API key | 80 | 1.2.0 |
-| bycircle | POI Search | Search POI by circle radius, filter, custom style | 150 | 1.2.0 |
-| bypolygon | POI Search | Search POI by polygon, filter, custom style | 150 | 1.2.0 |
-| byscreen | POI Search | Search POI by screen viewport, filter, custom style | 150 | 1.2.0 | 
-| bytext | POI Search | Search POI by text keyword, filter, custom style | 150 | 1.2.0 |
-| poi-get | POI Management | Get searched POI, filter, update, delete, focus | 150 | 1.2.0 |
-| poi-reset | POI Management | Clear searched POI by category or all | 80 | 1.2.0 |
-| search-path | Navigation | Create navigation path, custom style, delete | 150 | 1.2.0 |
-| select-path | Navigation | Select from multiple Amap navigation routes | 100 | 1.2.0 |
-| get-path | Navigation | Get added path, visibility, update, delete, focus | 150 | 1.2.0 |
-| lifecircle | Life Circle | N-minute reachable range by travel mode/time | 150 | 1.2.0 |
-| contour | Analysis | Terrain contour analysis, contour line/surface styling | 150 | 1.2.0 |
-| dig-terrain | Analysis | Earthwork fill/cut analysis, depth configuration | 150 | 1.2.0 |
-| height-limit | Analysis | Height restriction detection, threshold configuration | 150 | 1.2.0 |
-| intervisible | Analysis | Intervisibility analysis, line-of-sight detection | 150 | 1.2.0 |
-| openness | Analysis | Openness evaluation, sector visibility analysis | 150 | 1.2.0 |
-| skyline | Analysis | Skyline analysis, building contour styling, screenshot | 150 | 1.2.0 |
-| sunlight | Analysis | Solar radiation analysis, daylight assessment, compliance | 200 | 1.2.0 |
+| Skill | Domain | Capabilities | Lines |
+|-------|--------|-----------|-------|
+| initialization | Foundation | SDK install, plugin initialization, version query, get/delete operations | 200 |
+| box | Hospital | Room color blocks (geojson), color control, highlight, visibility, focus | 150 |
+| device | Hospital | Attached device templates, management, deletion, listing | 200 |
+| elevator | Hospital | Elevator creation, styling, animation, visibility, highlight, events | 180 |
+| keycommon | Internet Map | Configure Amap (高德地图) API key | 80 |
+| bycircle | POI Search | Search POI by circle radius, filter, custom style | 150 |
+| bypolygon | POI Search | Search POI by polygon, filter, custom style | 150 |
+| byscreen | POI Search | Search POI by screen viewport, filter, custom style | 150 |
+| bytext | POI Search | Search POI by text keyword, filter, custom style | 150 |
+| poi-get | POI Management | Get searched POI, filter, update, delete, focus | 150 |
+| poi-reset | POI Management | Clear searched POI by category or all | 80 |
+| search-path | Navigation | Create navigation path, custom style, delete | 150 |
+| select-path | Navigation | Select from multiple Amap navigation routes | 100 |
+| get-path | Navigation | Get added path, visibility, update, delete, focus | 150 |
+| lifecircle | Life Circle | N-minute reachable range by travel mode/time | 150 |
+| contour | Analysis | Terrain contour analysis, contour line/surface styling | 150 |
+| dig-terrain | Analysis | Earthwork fill/cut analysis, depth configuration | 150 |
+| height-limit | Analysis | Height restriction detection, threshold configuration | 150 |
+| intervisible | Analysis | Intervisibility analysis, line-of-sight detection | 150 |
+| openness | Analysis | Openness evaluation, sector visibility analysis | 150 |
+| skyline | Analysis | Skyline analysis, building contour styling, screenshot | 150 |
+| sunlight | Analysis | Solar radiation analysis, daylight assessment, compliance | 200 |
 
 ## How to Use
 
