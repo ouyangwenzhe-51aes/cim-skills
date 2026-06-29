@@ -73,6 +73,35 @@ def set_marketplace_version(path: str, version: str) -> None:
     write_json_file(path, data)
 
 
+def set_apm_versions(path: str, version: str) -> None:
+    apm_path = repo_path(path)
+    text = apm_path.read_text(encoding="utf-8")
+
+    # Update top-level plugin version.
+    text, top_level_count = re.subn(
+        r"(?m)^version:\s*\S+\s*$",
+        f"version: {version}",
+        text,
+        count=1,
+    )
+    if top_level_count == 0:
+        raise ReleaseError(f"Top-level version not found in {path}")
+
+    # Update marketplace package version (the first package entry in apm.yml).
+    text, package_count = re.subn(
+        r"(?m)^(\s*\-\s*name:\s*cimapi-skills\s*\n(?:\s+.*\n)*?\s*version:)\s*\S+\s*$",
+        rf"\1 {version}",
+        text,
+        count=1,
+    )
+    if package_count == 0:
+        raise ReleaseError(f"Marketplace package version not found in {path}")
+
+    apm_path.write_text(text, encoding="utf-8", newline="\n")
+
+
+
+
 def set_skill_version(path: Path, version: str, valid_until: str) -> None:
     text = path.read_text(encoding="utf-8")
 
@@ -159,6 +188,7 @@ def main() -> int:
     set_json_version(".cursor-plugin/plugin.json", args.version)
     set_marketplace_version(".claude-plugin/marketplace.json", args.version)
     set_marketplace_version(".cursor-plugin/marketplace.json", args.version)
+    set_apm_versions("apm.yml", args.version)
 
     for skill_path in repo_path("skills").rglob("SKILL.md"):
         set_skill_version(skill_path, args.version, args.valid_until)

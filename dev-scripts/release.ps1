@@ -43,6 +43,25 @@ function Set-MarketplaceVersion($Path) {
     Write-JsonFile $Path $json
 }
 
+function Set-ApmVersions($Path) {
+    $resolved = Resolve-Path $Path
+    $text = [System.IO.File]::ReadAllText($resolved, [System.Text.Encoding]::UTF8)
+
+    $topLevelPattern = '(?m)^version:\s*\S+\s*$'
+    if ($text -notmatch $topLevelPattern) {
+        throw "Top-level version not found in $Path"
+    }
+    $text = [regex]::Replace($text, $topLevelPattern, "version: $Version", 1)
+
+    $packagePattern = '(?ms)^(\s*-\s*name:\s*cimapi-skills\s*\r?\n(?:\s+.*\r?\n)*?\s*version:)\s*\S+\s*$'
+    if ($text -notmatch $packagePattern) {
+        throw "Marketplace package version not found in $Path"
+    }
+    $text = [regex]::Replace($text, $packagePattern, "`$1 $Version", 1)
+
+    [System.IO.File]::WriteAllText($resolved, $text, $Utf8NoBom)
+}
+
 function Set-SkillVersion($Path) {
     $text = [System.IO.File]::ReadAllText((Resolve-Path $Path), [System.Text.Encoding]::UTF8)
 
@@ -66,6 +85,7 @@ Set-JsonVersion '.claude-plugin/plugin.json'
 Set-JsonVersion '.cursor-plugin/plugin.json'
 Set-MarketplaceVersion '.claude-plugin/marketplace.json'
 Set-MarketplaceVersion '.cursor-plugin/marketplace.json'
+Set-ApmVersions 'apm.yml'
 
 Get-ChildItem 'skills' -Recurse -Filter 'SKILL.md' | ForEach-Object {
     Set-SkillVersion $_.FullName
